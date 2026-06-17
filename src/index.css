@@ -1,0 +1,11 @@
+/* Baseline reset for sandbox application */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0E0E0E;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
