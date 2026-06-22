@@ -178,14 +178,18 @@ export default function BlogList() {
 
           {/* Article 6 - Julian Sterling */}
           <article className="group cursor-pointer flex flex-col h-full">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-sage relative">
-              <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7eiUmmhUhc3O_1W9EvN6_sB2RP7-Vai4FGiMCL-AUOO6A3CIwBMDZBf5O5KjUEvPwFaOlM9Kp8tW39admKpL0j2nmHHivY9XZe7i1YxE3p0V_L6YDin1W2xjyLvmG2YPng1C3Txda3uSemBWOs84aa4l_u44H_UWuQxhe3N_cAHxMZC3nmCbzXHv6fVYgdzXuZusJKgWpk0dyVbIeooYvGOsjD5D5JgnGoAjMCoFwfsP8kuU_opwj9KQEBx9_iYwC1XZYyCIugs" alt="Article 6" />
-              <div className="absolute top-4 left-4">
-                <span className="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+            <Link to="/blog/the-human-element-in-revenue-operations" className="block relative">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-sage relative">
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7eiUmmhUhc3O_1W9EvN6_sB2RP7-Vai4FGiMCL-AUOO6A3CIwBMDZBf5O5KjUEvPwFaOlM9Kp8tW39admKpL0j2nmHHivY9XZe7i1YxE3p0V_L6YDin1W2xjyLvmG2YPng1C3Txda3uSemBWOs84aa4l_u44H_UWuQxhe3N_cAHxMZC3nmCbzXHv6fVYgdzXuZusJKgWpk0dyVbIeooYvGOsjD5D5JgnGoAjMCoFwfsP8kuU_opwj9KQEBx9_iYwC1XZYyCIugs" alt="Article 6" />
+                <div className="absolute top-4 left-4">
+                  <span className="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+                </div>
               </div>
-            </div>
+            </Link>
             <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Strategic Marketing</p>
-            <h3 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">The Human Element in Revenue Operations</h3>
+            <Link to="/blog/the-human-element-in-revenue-operations" className="block">
+              <h3 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">The Human Element in Revenue Operations</h3>
+            </Link>
             <p className="font-body-md text-text-muted mb-6 line-clamp-2">Why behavioral psychology remains the most important foundation for building sustainable marketing architecture.</p>
             <div className="flex items-center gap-3 mt-auto">
               <Link to="/profile" className="w-8 h-8 rounded-full bg-surface-variant overflow-hidden hover:opacity-80 transition-opacity">
