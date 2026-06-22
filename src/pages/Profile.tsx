@@ -11,10 +11,7 @@ export default function Profile() {
             <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
               Meet <span className="text-primary-container">Julian Sterling</span>
             </h1>
-            <button className="flex items-center gap-2 border border-border-light rounded-full px-4 py-2 text-sm font-semibold mb-8 hover:bg-surface-container transition-colors">
-              <span className="material-symbols-outlined text-[18px]">edit</span> Github
-            </button>
-            <div className="space-y-4 font-body-md text-text-muted mb-8 max-w-lg">
+            <div className="space-y-4 font-body-md text-text-muted mb-8 max-w-lg mt-8">
               <p>
                 Julian Sterling is a MarTech architect with over 15 years of experience leading digital transformation for Fortune 500 companies. With a unique background spanning both software engineering and behavioral psychology, Julian brings a clinical yet human-centric approach to marketing operations.
               </p>
@@ -45,19 +42,6 @@ export default function Profile() {
               </p>
             </div>
             
-            <div className="border border-border-light rounded-xl p-6 bg-white">
-              <div className="flex justify-between items-center mb-2">
-                <p className="font-semibold text-sm">Profile Strength</p>
-                <p className="font-semibold text-sm text-primary-container">Intermediate</p>
-              </div>
-              <div className="w-full h-2 bg-surface-container-high rounded-full mb-4 overflow-hidden">
-                <div className="h-full bg-primary-container w-[60%] rounded-full"></div>
-              </div>
-              <p className="text-sm text-text-muted mb-4">Add your AI/ML Certification to reach 'Master' status.</p>
-              <button className="w-full border border-border-light rounded-full py-2 text-primary font-semibold hover:bg-surface-container transition-colors">
-                Improve Profile
-              </button>
-            </div>
           </div>
         </div>
 
@@ -68,9 +52,6 @@ export default function Profile() {
           <p className="font-body-md text-text-muted max-w-2xl mx-auto mb-8">
             Bridging technical precision with strategic business outcomes through a decade of hands-on experience.
           </p>
-          <button className="inline-flex items-center gap-2 bg-surface-container-high px-6 py-2 rounded-full font-semibold hover:bg-surface-variant transition-colors">
-            <span className="material-symbols-outlined text-[18px]">add</span> Add Competence
-          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-section-v-padding">
@@ -80,9 +61,7 @@ export default function Profile() {
             { icon: "memory", title: "Strategic AI Integration", desc: "Deploying LLMs and machine learning workflows that actually work within established marketing operations frameworks." }
           ].map((comp, idx) => (
             <div key={idx} className="border border-border-light rounded-2xl p-8 bg-surface-bright relative group hover:border-primary transition-colors cursor-pointer">
-              <button className="absolute top-4 right-4 text-text-muted opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="material-symbols-outlined text-[18px]">edit</span>
-              </button>
+
               <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-6 text-primary">
                 <span className="material-symbols-outlined">{comp.icon}</span>
               </div>
@@ -97,10 +76,7 @@ export default function Profile() {
           <div className="lg:col-span-4">
             <p className="font-label-caps text-label-caps text-text-muted tracking-widest mb-4">THE NARRATIVE</p>
             <h2 className="font-headline-md text-headline-md text-on-surface mb-6">Professional Journey</h2>
-            <button className="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-opacity mb-8">
-              <span className="material-symbols-outlined text-[18px]">edit</span> Edit Experience
-            </button>
-            <p className="font-body-md text-text-muted mb-8">
+            <p className="font-body-md text-text-muted mb-8 mt-8">
               Julian's career began at the intersection of early-stage SaaS and digital media, evolving from a technical developer into a strategic growth leader. His path is defined by a constant curiosity about how systems—both technical and human—interact.
             </p>
             <div className="border border-border-light rounded-xl p-6 bg-surface-bright">
@@ -120,9 +96,7 @@ export default function Profile() {
                 <div key={idx} className="relative group">
                   <div className="absolute -left-[45px] top-1 w-3 h-3 bg-primary-container rounded-full ring-4 ring-white"></div>
                   <div className="border border-border-light rounded-2xl p-8 bg-white group-hover:border-primary-container transition-colors relative">
-                    <button className="absolute top-4 right-4 text-text-muted opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="material-symbols-outlined text-[18px]">edit</span>
-                    </button>
+
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-6">
                       <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
                     </div>
@@ -142,9 +116,6 @@ export default function Profile() {
           <div className="text-center mb-16">
             <p className="font-label-caps text-label-caps text-primary tracking-widest mb-4">LEADERSHIP</p>
             <h2 className="font-headline-md text-headline-md mb-8">Key Professional Milestones</h2>
-            <button className="inline-flex items-center gap-2 border border-white/20 px-6 py-2 rounded-full font-semibold hover:bg-white/10 transition-colors text-sm">
-              <span className="material-symbols-outlined text-[18px]">add</span> Add Milestone
-            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -155,9 +126,7 @@ export default function Profile() {
               { year: "2024", icon: "hub", title: "MarTechAdda Launch", desc: "Launched the world's most focused community for technical marketers and operations professionals." }
             ].map((milestone, idx) => (
               <div key={idx} className="relative group cursor-pointer">
-                <button className="absolute top-0 right-0 text-white/50 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="material-symbols-outlined text-[18px]">edit</span>
-                </button>
+
                 <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center mb-6">
                   <span className="material-symbols-outlined text-[20px]">{milestone.icon}</span>
                 </div>
