@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function BlogList() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className="bg-background-surface font-body-md text-on-surface">
       <main className="max-w-[1280px] mx-auto px-gutter py-section-v-padding">
@@ -205,15 +208,95 @@ export default function BlogList() {
               </div>
             </div>
           </article>
+          
+          {showMore && (
+            <>
+              {/* Article 7 */}
+              <article className="group cursor-pointer flex flex-col h-full">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-cream relative">
+                  <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD95UMrQeAJ79eEgGEWkhKWPqcJGJrATXrS9JokSYDI3GABhyPEaZ-HT2Di878EICLJc7MJepQfjNQ5ePz0htQZ6n2TVlloBYbcaKigN4pXM930Aq-G3AF7KBeXSOGfmmdEmrcM4n9Pm07LCrXUylJTznpi6cUhDFCu0tUYflxYN3fm9suk7jOEAy_31D8l9LvnYOnyCEzDi7cAEW0epBtWveG-U6BzRCtZW1nIcB1SUUh1fl62eQNUFMB4opnIBjyXGjOgn2epckQ" alt="Article 7" />
+                  <div className="absolute top-4 left-4">
+                    <span className="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                  </div>
+                </div>
+                <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">SEO Strategy</p>
+                <h3 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">Navigating the SGE Update</h3>
+                <p className="font-body-md text-text-muted mb-6 line-clamp-2">How Google's Search Generative Experience is changing the rules of organic visibility and content marketing.</p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Marcus Thorne" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <p className="font-body-md font-semibold text-sm">Marcus Thorne</p>
+                    <p className="text-[12px] text-text-muted">Sep 24, 2024</p>
+                  </div>
+                </div>
+              </article>
+
+              {/* Article 8 */}
+              <article className="group cursor-pointer flex flex-col h-full">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+                  <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRhiiEpUUjy-l5Muivf4PM-Scti0jfnqWSUr1EeaVMEW8IDXa-zCvjFzixeWUYjpGCKJmE1qJb9BlXrZ8TRRl5mTU8BpfGJaRJZkUDk7V_nTqFpR50xUuY8gTCrUgLRC5Wx-UtHtVaGmjt0a8rj4K-qiVMubqMlXKTIE8bCGnsqhBRcSlpfLc06l9v9ns3FwqY3Wkbi-RbIK13Im21jvg6gf0bIQL25h8KucHhT21p4R_OWWxyW2QuElGtLV6xlKEkdYoacKoV0wE" alt="Article 8" />
+                  <div className="absolute top-4 left-4">
+                    <span className="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+                  </div>
+                </div>
+                <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Social Media</p>
+                <h3 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">The End of the Endless Scroll</h3>
+                <p className="font-body-md text-text-muted mb-6 line-clamp-2">Shifting metrics from time-in-app to meaningful interaction as users combat digital fatigue.</p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="David Chen" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <p className="font-body-md font-semibold text-sm">David Chen</p>
+                    <p className="text-[12px] text-text-muted">Sep 19, 2024</p>
+                  </div>
+                </div>
+              </article>
+
+              {/* Article 9 */}
+              <article className="group cursor-pointer flex flex-col h-full">
+                <div className="aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-sage relative">
+                  <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSImh4f2E2NnFtLFwyRNhiLphtNfiiI8RqG2uen0ppuwkJRblWu-PWhg3SqUiVqPQyfH6Jp9jHROZyUioS_ovBAX2-IijzpTCx4cqZBaANSb_dJ7LWRgInP_cUOObL44XC9q4pjU-PLgEXxsedsDxID5WqxneZPx9jy0jrddTaFtz33gRWQI2SeEcYNuTeFD7suuc90tYdrqmNrtRRvLpQTukvhQfLl6uSe5ldqj9sJSGj4uBU-jn7PCEC06Sv-98dLVJFkWSYUd4" alt="Article 9" />
+                  <div className="absolute top-4 left-4">
+                    <span className="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+                  </div>
+                </div>
+                <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Conversion Optimization</p>
+                <h3 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">Micro-Interactions that Maximize ROI</h3>
+                <p className="font-body-md text-text-muted mb-6 line-clamp-2">Small, subtle UI changes that can dramatically improve your form completion and checkout rates.</p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Sarah Jenkins" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <p className="font-body-md font-semibold text-sm">Sarah Jenkins</p>
+                    <p className="text-[12px] text-text-muted">Sep 15, 2024</p>
+                  </div>
+                </div>
+              </article>
+            </>
+          )}
         </section>
 
         {/* Load More */}
-        <div className="flex flex-col items-center justify-center mb-section-v-padding">
-          <button className="flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-full font-bold hover:bg-primary/5 transition-colors mb-4">
-            Load More Articles <span className="material-symbols-outlined text-[20px]">expand_more</span>
-          </button>
-          <p className="font-label-caps text-[10px] tracking-widest text-text-muted uppercase">Showing 6 of 48 Articles</p>
-        </div>
+        {!showMore && (
+          <div className="flex flex-col items-center justify-center mb-section-v-padding">
+            <button 
+              onClick={() => setShowMore(true)}
+              className="flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-full font-bold hover:bg-primary/5 transition-colors mb-4"
+            >
+              Load More Articles <span className="material-symbols-outlined text-[20px]">expand_more</span>
+            </button>
+            <p className="font-label-caps text-[10px] tracking-widest text-text-muted uppercase">Showing 6 of 48 Articles</p>
+          </div>
+        )}
+        {showMore && (
+          <div className="flex flex-col items-center justify-center mb-section-v-padding">
+            <p className="font-label-caps text-[10px] tracking-widest text-text-muted uppercase">Showing 9 of 48 Articles</p>
+          </div>
+        )}
       </main>
 
       {/* CTA Section */}
