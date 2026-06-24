@@ -16,7 +16,7 @@ export default function BlogHome() {
     <div className="bg-background text-on-surface font-body-md overflow-x-hidden">
       <main className="max-w-7xl mx-auto px-8">
         {/* Page Header */}
-        <header className="py-16 flex flex-col md:flex-row justify-between items-end gap-8">
+        <header className="pt-8 pb-10 flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="flex-1">
             <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">The MarTechAdda Blog</h1>
             <p className="font-body-lg text-body-lg text-text-muted">Marketing insights and expert hiring guidance.</p>
@@ -34,138 +34,136 @@ export default function BlogHome() {
 
         {/* Hero Section with Slider */}
         <section className="mb-section-v-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-            {/* Sliding Area */}
-            <div className="lg:col-span-7 relative overflow-hidden">
-              <div 
-                className="slider-track" 
-                style={{ transform: `translateX(-${currentSlide * 100}%)`, display: 'flex', transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)' }}
-              >
-                {/* Slide 1 */}
-                <article className="slide group cursor-pointer flex-shrink-0 w-full pr-4">
-                  <div className="aspect-[16/9] bg-card-fill-sage rounded-lg overflow-hidden mb-6 relative">
-                    <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Aa9VAWnw1qDnZCvBgcL64G5FKrjyCPFhF0tWr2zB5iOq4LFlcgY_JEUvUusjfkH1YRXijRKrIi4mtGf0wAb2jVtKVOAi6-aaBeHj73jBDOxoh33eLwgMLkfYVjeO2kFjeqmh5Pd_gFimk5v6nxkbDmhOwvx7WA3QzaRXpBG4a4ZWVnm7FBUw_TQANsXfuDsYsdypj-sqCHgWwxtFctV6yMDAT7KPAbIFfDzDUIxQZ681Og8ZYrLyvKBldMlDA3e2a6pnM3EyxGg" alt="Slide 1" />
-                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-                      <span className="accent-dot bg-[#FF6A39] w-3 h-3 rounded-full inline-block"></span>
-                      <span className="font-label-caps text-label-caps text-on-surface tracking-widest">FEATURED</span>
+          <div className="relative overflow-hidden">
+            <div 
+              className="slider-track flex" 
+              style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)' }}
+            >
+              {/* Slide 1 */}
+              <article className="slide flex-shrink-0 w-full pr-0">
+                <Link to="/blog/how-generative-ai" className="block group">
+                  <div className="flex flex-col md:flex-row bg-surface-container-low rounded-3xl overflow-hidden border border-border-light group-hover:shadow-lg transition-shadow duration-500 md:h-[340px]">
+                    {/* Content (Left) */}
+                    <div className="flex-1 p-6 md:p-10 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 mb-4 text-[10px] font-label-caps tracking-widest text-text-muted uppercase">
+                        <span>ARTICLE</span>
+                        <span>-</span>
+                        <span>8 MIN READ</span>
+                      </div>
+                      <h2 className="font-headline-md text-2xl md:text-3xl leading-tight text-on-surface mb-8 group-hover:text-primary transition-colors line-clamp-3">
+                        How Generative AI is Rewriting the Playbook for Performance Marketing Agencies
+                      </h2>
+                      <div className="flex items-center gap-4 mt-auto">
+                        <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-variant">
+                          <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="Sarah Jenkins" />
+                        </div>
+                        <div>
+                          <p className="font-body-md font-bold text-on-surface text-sm">Sarah Jenkins</p>
+                          <p className="text-xs text-text-muted">Chief Marketing Officer, MarTechAdda</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Image (Right) */}
+                    <div className="md:w-1/2 lg:w-7/12 relative aspect-video md:aspect-auto overflow-hidden p-4 md:p-6 lg:p-8">
+                      <div className="w-full h-full rounded-2xl overflow-hidden bg-card-fill-sage relative">
+                        <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Aa9VAWnw1qDnZCvBgcL64G5FKrjyCPFhF0tWr2zB5iOq4LFlcgY_JEUvUusjfkH1YRXijRKrIi4mtGf0wAb2jVtKVOAi6-aaBeHj73jBDOxoh33eLwgMLkfYVjeO2kFjeqmh5Pd_gFimk5v6nxkbDmhOwvx7WA3QzaRXpBG4a4ZWVnm7FBUw_TQANsXfuDsYsdypj-sqCHgWwxtFctV6yMDAT7KPAbIFfDzDUIxQZ681Og8ZYrLyvKBldMlDA3e2a6pnM3EyxGg" alt="Slide 1" />
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">STRATEGIC MARKETING</span>
-                    <span className="w-1 h-1 bg-border-light rounded-full"></span>
-                    <span className="font-label-caps text-label-caps text-text-muted tracking-widest uppercase">8 MIN READ</span>
-                  </div>
-                  <h2 className="font-headline-md text-headline-md text-on-surface mb-6 group-hover:text-primary transition-colors">How Generative AI is Rewriting the Playbook for Performance Marketing Agencies</h2>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden border border-border-light bg-surface-container">
-                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="Sarah Jenkins" />
-                    </div>
-                    <div>
-                      <p className="font-body-md font-bold text-on-surface">Sarah Jenkins</p>
-                      <p className="font-label-caps text-[10px] tracking-widest uppercase text-text-muted">Chief Marketing Officer, MarTechAdda</p>
-                    </div>
-                  </div>
-                </article>
+                </Link>
+              </article>
 
-                {/* Slide 2 */}
-                <article className="slide group cursor-pointer flex-shrink-0 w-full pr-4">
-                  <div className="aspect-[16/9] bg-card-fill-cream rounded-lg overflow-hidden mb-6 relative">
-                    <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7eiUmmhUhc3O_1W9EvN6_sB2RP7-Vai4FGiMCL-AUOO6A3CIwBMDZBf5O5KjUEvPwFaOlM9Kp8tW39admKpL0j2nmHHivY9XZe7i1YxE3p0V_L6YDin1W2xjyLvmG2YPng1C3Txda3uSemBWOs84aa4l_u44H_UWuQxhe3N_cAHxMZC3nmCbzXHv6fVYgdzXuZusJKgWpk0dyVbIeooYvGOsjD5D5JgnGoAjMCoFwfsP8kuU_opwj9KQEBx9_iYwC1XZYyCIugs" alt="Slide 2" />
-                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-                      <span className="accent-dot bg-secondary w-3 h-3 rounded-full inline-block"></span>
-                      <span className="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">TRENDING</span>
+              {/* Slide 2 */}
+              <article className="slide flex-shrink-0 w-full pr-0">
+                <Link to="/blog/zero-party-data" className="block group">
+                  <div className="flex flex-col md:flex-row bg-surface-container-low rounded-3xl overflow-hidden border border-border-light group-hover:shadow-lg transition-shadow duration-500 md:h-[340px]">
+                    <div className="flex-1 p-6 md:p-10 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 mb-4 text-[10px] font-label-caps tracking-widest text-text-muted uppercase">
+                        <span>GUIDE</span>
+                        <span>-</span>
+                        <span>6 MIN READ</span>
+                      </div>
+                      <h2 className="font-headline-md text-2xl md:text-3xl leading-tight text-on-surface mb-8 group-hover:text-primary transition-colors line-clamp-3">
+                        The Future of Zero-Party Data: Building Direct Customer Relationships
+                      </h2>
+                      <div className="flex items-center gap-4 mt-auto">
+                        <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-variant">
+                          <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="David Chen" />
+                        </div>
+                        <div>
+                          <p className="font-body-md font-bold text-on-surface text-sm">David Chen</p>
+                          <p className="text-xs text-text-muted">Head of Strategy, MarTechAdda</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 lg:w-7/12 relative aspect-video md:aspect-auto overflow-hidden p-4 md:p-6 lg:p-8">
+                      <div className="w-full h-full rounded-2xl overflow-hidden bg-card-fill-cream relative">
+                        <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7eiUmmhUhc3O_1W9EvN6_sB2RP7-Vai4FGiMCL-AUOO6A3CIwBMDZBf5O5KjUEvPwFaOlM9Kp8tW39admKpL0j2nmHHivY9XZe7i1YxE3p0V_L6YDin1W2xjyLvmG2YPng1C3Txda3uSemBWOs84aa4l_u44H_UWuQxhe3N_cAHxMZC3nmCbzXHv6fVYgdzXuZusJKgWpk0dyVbIeooYvGOsjD5D5JgnGoAjMCoFwfsP8kuU_opwj9KQEBx9_iYwC1XZYyCIugs" alt="Slide 2" />
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">DATA & ANALYTICS</span>
-                    <span className="w-1 h-1 bg-border-light rounded-full"></span>
-                    <span className="font-label-caps text-label-caps text-text-muted tracking-widest uppercase">6 MIN READ</span>
-                  </div>
-                  <h2 className="font-headline-md text-headline-md text-on-surface mb-6 group-hover:text-primary transition-colors">The Future of Zero-Party Data: Building Direct Customer Relationships</h2>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden border border-border-light bg-surface-container">
-                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="David Chen" />
-                    </div>
-                    <div>
-                      <p className="font-body-md font-bold text-on-surface">David Chen</p>
-                      <p className="font-label-caps text-[10px] tracking-widest uppercase text-text-muted">Head of Strategy, MarTechAdda</p>
-                    </div>
-                  </div>
-                </article>
+                </Link>
+              </article>
 
-                {/* Slide 3 */}
-                <article className="slide group cursor-pointer flex-shrink-0 w-full pr-4">
-                  <div className="aspect-[16/9] bg-card-fill-sage rounded-lg overflow-hidden mb-6 relative">
-                    <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVYyw0yvBynF4N6xdqgKT6n-pbCz6txCI38y92j9Sz2YNueCcxghXZ68bh2RJX6PnB79IVeE2rH7e8lde48p_HL90HmtGcw1vw8MFkBoB3gzVEFQidu7B8Brm6kzaRvyjtSPrYnz_V4vbMCTN4DGUiC_qGO7GeJ0m3G5WplbWlqBz79ULg1PrInchqu1DauT-lWKxaaN3QGYXcxLrlz8F2-GN2qfI3zQqsgIP0QXrccDfS8eQ2MnLBhw_a8d4mzRTiY2-jOunIG5M" alt="Slide 3" />
-                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-                      <span className="accent-dot bg-tertiary w-3 h-3 rounded-full inline-block"></span>
-                      <span className="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">INSIGHTS</span>
+              {/* Slide 3 */}
+              <article className="slide flex-shrink-0 w-full pr-0">
+                <Link to="/blog/attribution-model" className="block group">
+                  <div className="flex flex-col md:flex-row bg-surface-container-low rounded-3xl overflow-hidden border border-border-light group-hover:shadow-lg transition-shadow duration-500 md:h-[340px]">
+                    <div className="flex-1 p-6 md:p-10 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 mb-4 text-[10px] font-label-caps tracking-widest text-text-muted uppercase">
+                        <span>INSIGHTS</span>
+                        <span>-</span>
+                        <span>10 MIN READ</span>
+                      </div>
+                      <h2 className="font-headline-md text-2xl md:text-3xl leading-tight text-on-surface mb-8 group-hover:text-primary transition-colors line-clamp-3">
+                        Why Your Attribution Model is Probably Lying to You (And How to Fix It)
+                      </h2>
+                      <div className="flex items-center gap-4 mt-auto">
+                        <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-variant">
+                          <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="Michael Ross" />
+                        </div>
+                        <div>
+                          <p className="font-body-md font-bold text-on-surface text-sm">Michael Ross</p>
+                          <p className="text-xs text-text-muted">Marketing Analyst</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 lg:w-7/12 relative aspect-video md:aspect-auto overflow-hidden p-4 md:p-6 lg:p-8">
+                      <div className="w-full h-full rounded-2xl overflow-hidden bg-card-fill-sage relative">
+                        <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVYyw0yvBynF4N6xdqgKT6n-pbCz6txCI38y92j9Sz2YNueCcxghXZ68bh2RJX6PnB79IVeE2rH7e8lde48p_HL90HmtGcw1vw8MFkBoB3gzVEFQidu7B8Brm6kzaRvyjtSPrYnz_V4vbMCTN4DGUiC_qGO7GeJ0m3G5WplbWlqBz79ULg1PrInchqu1DauT-lWKxaaN3QGYXcxLrlz8F2-GN2qfI3zQqsgIP0QXrccDfS8eQ2MnLBhw_a8d4mzRTiY2-jOunIG5M" alt="Slide 3" />
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">AGENCY GROWTH</span>
-                    <span className="w-1 h-1 bg-border-light rounded-full"></span>
-                    <span className="font-label-caps text-label-caps text-text-muted tracking-widest uppercase">10 MIN READ</span>
-                  </div>
-                  <h2 className="font-headline-md text-headline-md text-on-surface mb-6 group-hover:text-primary transition-colors">Why Your Attribution Model is Probably Lying to You (And How to Fix It)</h2>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden border border-border-light bg-surface-container">
-                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqw3E7XDLa5L79ZBRABlRJMz_CKRvCxSl46Midi1SykJD9IuK4ae16MHFUvMc-fO0udJGijNVZpudxYkoCi4i9AdNuOXjSej-Xwbyj6TkaBLYiW55g1zvq4wKduYJlpzerndgIl499X8iu4NwdJpaRsYfVwCTOrAh0bci00TV3k-U8YOVn2affb3VzhXDazVdCUL8b27dNJzu9MtiVhRnN9moiR573XzDcA2V1wM8A_EbLC4MUuckLrNz9YVVJwvSxuEXhvYTiXM" alt="Michael Ross" />
-                    </div>
-                    <div>
-                      <p className="font-body-md font-bold text-on-surface">Michael Ross</p>
-                      <p className="font-label-caps text-[10px] tracking-widest uppercase text-text-muted">Marketing Analyst</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
+                </Link>
+              </article>
+            </div>
 
-              {/* Slider Indicators */}
-              <div className="mt-8 flex items-center gap-3">
+            {/* Slider Indicators & Controls */}
+            <div className="mt-8 flex items-center justify-between gap-6">
+              <div className="flex-1 flex items-center gap-2 max-w-2xl">
                 {[0, 1, 2].map((idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? 'w-6 bg-primary' : 'w-3 bg-border-light'}`}
+                    className={`h-0.5 rounded-full transition-all duration-300 ${currentSlide === idx ? 'flex-1 bg-on-surface' : 'flex-1 bg-border-light hover:bg-border'}`}
                     aria-label={`Go to slide ${idx + 1}`}
                   ></button>
                 ))}
               </div>
-            </div>
-
-            {/* Fixed Interactive Widget */}
-            <div className="lg:col-span-5 bg-on-surface rounded-lg p-10 text-white flex flex-col justify-between relative overflow-hidden h-fit">
-              <div className="relative z-10">
-                <div className="font-label-caps text-[10px] tracking-widest uppercase text-secondary-fixed mb-4">INTERACTIVE TOOLS</div>
-                <h3 className="font-headline-md text-[28px] leading-tight mb-8">Calculate your expert match score in seconds.</h3>
-                {/* Visual Widget Data Viz */}
-                <div className="space-y-6 bg-white/5 p-6 rounded-lg border border-white/10 backdrop-blur-sm">
-                  <div className="flex justify-between items-end gap-2 h-32">
-                    <div className="w-full bg-primary-container/20 rounded-t-sm h-[40%]"></div>
-                    <div className="w-full bg-primary-container/40 rounded-t-sm h-[60%]"></div>
-                    <div className="w-full bg-primary-container/60 rounded-t-sm h-[85%]"></div>
-                    <div className="w-full bg-primary-container rounded-t-sm h-[70%] animate-pulse"></div>
-                    <div className="w-full bg-primary-container/50 rounded-t-sm h-[50%]"></div>
-                  </div>
-                  <div className="flex justify-between text-[10px] font-label-caps text-surface-variant uppercase tracking-widest">
-                    <span>SEO</span>
-                    <span>PPC</span>
-                    <span>SOCIAL</span>
-                    <span>EMAIL</span>
-                    <span>DATA</span>
-                  </div>
-                  <div className="pt-4 border-t border-white/10 flex justify-between items-center">
-                    <span className="text-body-md font-semibold">Your Match Score</span>
-                    <span className="text-headline-md text-primary-container">92%</span>
-                  </div>
-                </div>
+              <div className="flex items-center gap-2">
+                <button 
+                  onClick={() => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1))}
+                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-colors text-text-muted"
+                >
+                  <span className="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button 
+                  onClick={() => setCurrentSlide((prev) => (prev + 1) % totalSlides)}
+                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-colors text-text-muted"
+                >
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </button>
               </div>
-              <button className="relative z-10 w-full mt-8 bg-white text-on-surface py-4 rounded-full font-bold hover:bg-primary-container hover:text-white transition-all flex justify-center items-center gap-2">
-                Start Matching
-                <span className="material-symbols-outlined">trending_up</span>
-              </button>
-              {/* Background aesthetic flare */}
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-20"></div>
             </div>
           </div>
         </section>
@@ -199,7 +197,7 @@ export default function BlogHome() {
                 <span className="font-label-caps text-label-caps text-primary mb-2 block uppercase tracking-widest">Insights</span>
                 <h3 className="font-headline-md text-headline-md text-on-surface">MarTechAdda News</h3>
               </div>
-              <Link to="#" className="font-body-md font-semibold text-on-surface flex items-center gap-2 hover:text-primary transition-colors">
+              <Link to="/blog" className="font-body-md font-semibold text-on-surface flex items-center gap-2 hover:text-primary transition-colors">
                 View all <span className="material-symbols-outlined text-[18px]">open_in_new</span>
               </Link>
             </div>
@@ -241,7 +239,7 @@ export default function BlogHome() {
                 Marketing Trends & AI
                 <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
               </h3>
-              <Link to="#" className="font-body-md font-semibold text-on-surface flex items-center gap-2 hover:text-primary transition-colors">
+              <Link to="/blog" className="font-body-md font-semibold text-on-surface flex items-center gap-2 hover:text-primary transition-colors">
                 View all <span className="material-symbols-outlined text-[18px]">chevron_right</span>
               </Link>
             </div>

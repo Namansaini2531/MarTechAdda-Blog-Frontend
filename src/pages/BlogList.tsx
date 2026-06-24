@@ -59,7 +59,7 @@ export default function BlogList() {
           </div>
           <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 hide-scrollbar">
             <button className="whitespace-nowrap px-6 py-2 bg-on-surface text-white rounded-full font-semibold">All Insights</button>
-            <button className="whitespace-nowrap px-6 py-2 bg-white border border-border-light text-on-surface hover:bg-surface-container-low transition-colors rounded-full font-semibold">Branding</button>
+            <Link to="/blog/category/branding" className="whitespace-nowrap px-6 py-2 bg-white border border-border-light text-on-surface hover:bg-surface-container-low transition-colors rounded-full font-semibold">Branding</Link>
             <button className="whitespace-nowrap px-6 py-2 bg-white border border-border-light text-on-surface hover:bg-surface-container-low transition-colors rounded-full font-semibold">Data Strategy</button>
             <button className="whitespace-nowrap px-6 py-2 bg-white border border-border-light text-on-surface hover:bg-surface-container-low transition-colors rounded-full font-semibold">Architecture</button>
             <button className="whitespace-nowrap px-6 py-2 bg-white border border-border-light text-on-surface hover:bg-surface-container-low transition-colors rounded-full font-semibold">AI Integration</button>
