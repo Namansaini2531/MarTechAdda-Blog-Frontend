@@ -333,6 +333,54 @@ export default function BlogPost() {
           </div>
 
         </article>
+
+        {/* Related Articles Section */}
+        <section className="mt-24 pt-16 border-t border-border-light">
+          <div className="flex justify-between items-end mb-10">
+            <h3 className="font-headline-md text-headline-md text-on-surface">Related Articles</h3>
+            <Link to="/blog" className="font-body-md font-semibold text-on-surface flex items-center gap-2 hover:text-primary transition-colors">
+              View all <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Article 1 */}
+            <article className="group cursor-pointer flex flex-col h-full">
+              <Link to="/blog/the-psychology-of-color" className="block relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-cream">
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD95UMrQeAJ79eEgGEWkhKWPqcJGJrATXrS9JokSYDI3GABhyPEaZ-HT2Di878EICLJc7MJepQfjNQ5ePz0htQZ6n2TVlloBYbcaKigN4pXM930Aq-G3AF7KBeXSOGfmmdEmrcM4n9Pm07LCrXUylJTznpi6cUhDFCu0tUYflxYN3fm9suk7jOEAy_31D8l9LvnYOnyCEzDi7cAEW0epBtWveG-U6BzRCtZW1nIcB1SUUh1fl62eQNUFMB4opnIBjyXGjOgn2epckQ" alt="Related 1" />
+              </Link>
+              <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Architecture</p>
+              <Link to="/blog/the-psychology-of-color" className="block">
+                <h4 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">Mastering the Modern MarTech Stack: A 2024 Blueprint</h4>
+              </Link>
+              <p className="font-body-md text-text-muted mb-6 line-clamp-2">A deep dive into why modularity is winning over monolithic suites in the enterprise landscape.</p>
+            </article>
+
+            {/* Article 2 */}
+            <article className="group cursor-pointer flex flex-col h-full">
+              <Link to="/blog/the-typography-of-trust" className="block relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-card-fill-sage">
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSImh4f2E2NnFtLFwyRNhiLphtNfiiI8RqG2uen0ppuwkJRblWu-PWhg3SqUiVqPQyfH6Jp9jHROZyUioS_ovBAX2-IijzpTCx4cqZBaANSb_dJ7LWRgInP_cUOObL44XC9q4pjU-PLgEXxsedsDxID5WqxneZPx9jy0jrddTaFtz33gRWQI2SeEcYNuTeFD7suuc90tYdrqmNrtRRvLpQTukvhQfLl6uSe5ldqj9sJSGj4uBU-jn7PCEC06Sv-98dLVJFkWSYUd4" alt="Related 2" />
+              </Link>
+              <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Analytics</p>
+              <Link to="/blog/the-typography-of-trust" className="block">
+                <h4 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">Beyond the Dashboard: Narrative Data Storytelling</h4>
+              </Link>
+              <p className="font-body-md text-text-muted mb-6 line-clamp-2">Why your C-suite doesn't care about your metrics—and how to speak their language using impact-driven data narratives.</p>
+            </article>
+
+            {/* Article 3 */}
+            <article className="group cursor-pointer flex flex-col h-full">
+              <Link to="/blog/the-human-element-in-revenue-operations" className="block relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-surface-container">
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRhiiEpUUjy-l5Muivf4PM-Scti0jfnqWSUr1EeaVMEW8IDXa-zCvjFzixeWUYjpGCKJmE1qJb9BlXrZ8TRRl5mTU8BpfGJaRJZkUDk7V_nTqFpR50xUuY8gTCrUgLRC5Wx-UtHtVaGmjt0a8rj4K-qiVMubqMlXKTIE8bCGnsqhBRcSlpfLc06l9v9ns3FwqY3Wkbi-RbIK13Im21jvg6gf0bIQL25h8KucHhT21p4R_OWWxyW2QuElGtLV6xlKEkdYoacKoV0wE" alt="Related 3" />
+              </Link>
+              <p className="font-label-caps text-[10px] tracking-widest text-text-muted mb-2 uppercase">Branding</p>
+              <Link to="/blog/the-human-element-in-revenue-operations" className="block">
+                <h4 className="font-body-lg font-bold text-on-surface mb-3 group-hover:text-primary transition-colors line-clamp-2">The Algorithmic Brand: Identity in the Age of AI</h4>
+              </Link>
+              <p className="font-body-md text-text-muted mb-6 line-clamp-2">How brands are maintaining human resonance while optimizing for machine-driven discovery and recommendation engines.</p>
+            </article>
+          </div>
+        </section>
       </main>
 
       {/* Newsletter Band */}
